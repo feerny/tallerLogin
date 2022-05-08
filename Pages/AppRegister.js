@@ -8,9 +8,9 @@ icon.addEventListener('click', (e)=>{
 
     const rutaActual = e.target.getAttribute('src');
     
-    if (rutaActual == 'images/menu.png') {
+    if (rutaActual == '../Images/menu.png') {
         icon.classList.toggle('withe')
     }else{
-        e.target.setAttribute('src','images/menu.png');
+        e.target.setAttribute('src','../Images/menu.png');
     }
 })

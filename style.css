@@ -5,14 +5,63 @@
   padding: 0;
 }
 
+.Menu{
+  display: none;
+}
+
 body {
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  background: linear-gradient(90deg, black,#0f3f0d,#0f920f,#04e40f);
+  background: linear-gradient(90deg, #04e40f,#0f920f,#0f3f0d,black);
 }
+
+.icon-menu{
+  margin: 40px 50px;
+  position: relative;
+  z-index: 10;
+}
+
+.icon-menu img{
+  vertical-align: top;
+  width: 3rem;
+  cursor: pointer;
+}
+
+.cont-menu{
+  background-color: black;
+  box-shadow: 2px 0px 5px 2px rgb(66,66,66);
+  width: 400px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .5s ease;
+}
+
+.cont-menu ul{
+  padding: 100px 0px 20px 0px;
+  list-style: none;
+}
+
+.cont-menu ul a{
+  color: white;
+  display: block;
+  font-size: 25px;
+  font-family: 'Minecraft', sans-serif;
+  text-decoration: none;
+  padding: 10px 50px;
+  cursor: pointer;
+}
+
+.cont-menu ul a:hover{
+  background-color: white;
+  color: rgb(42, 42, 42);
+}
+
+
 
 header {
   width: 100%;
@@ -34,7 +83,7 @@ nav a {
   margin-top: 1rem;
   font-size: 1.6rem;
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: white;
   font-family: 'Minecraft', sans-serif;
   font-weight: 800;  
   font-style: oblique;
@@ -53,7 +102,7 @@ a:focus {
 header > h1 {
   width: 80%;
   font-size: 3rem;
-  color: #fff;
+  color: rgb(0, 0, 0);
   font-style: italic;
   font-family: 'Minecraft', sans-serif;
   margin-left: 1rem;  
@@ -64,7 +113,7 @@ hr {
   text-align: center;
   margin: 2rem ;
   height: 0.2rem;
-  background: linear-gradient(-40deg, #050404, #494443,rgb(136, 132, 131));
+  background: linear-gradient(-40deg, rgb(136, 132, 131), #494443,#050404);
 }
 
 main {
@@ -158,5 +207,38 @@ main > img:hover {
 .myButton:active {
 	position:relative;
 	top:1px;
+}
+
+
+/*estilos para js*/
+
+.active{
+  transform: translate(-600px);
+}
+
+
+
+.withe{
+  filter: invert();
+}
+
+
+/*media query*/
+@media (max-width: 900px) {
+ .Menu{
+   display: block;
+ }
+
+ .ocultar{
+   display: none;
+ }
+
+}
+
+body {
+
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(90deg, #04e40f,#0f920f,#0f3f0d,black);
 }
 
