@@ -3,9 +3,6 @@ const password = document.getElementById("password");
 
 const botton = document.getElementById("botton");
 
-
-
-
 botton.addEventListener("click",validation);
 
 
